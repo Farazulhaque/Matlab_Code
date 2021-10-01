@@ -1,15 +1,15 @@
 play = 'y'
 while play == 'y'
-    matnum = floor(10 * rand + 1);        % generate random number between 1 - 10
+    matnum = floor(100 * rand + 1);        % generate random number between 1 - 10
     guess = input('Your guess please: '); % taking user input 
     count = 0;
 
     while guess ~= matnum                 % loop until guess number is not equal to generated random number
         if guess > matnum                 % if guess number is greater than generated random number
-            disp ('Too high')             % then print Too high
-        else                              % otherwise
-            disp ('Too low')              % print Too low
-        end;                              % close if-else
+            disp ('That is too high. Try again.')             % then print Too high
+        else                                                  % otherwise
+            disp ('That is too low. Try again.')              % print Too low
+        end;                                                  % close if-else
         guess = input('Your next guess please: '); % guess again
         count = count + 1;
     end                                   % end while loop
